@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Signup</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="blue-box" style="text-align: center; padding: 1px;">
+        <div class="text-container">
+            <span style="font-weight: bold;">Enter your email to get sent recipes</span>
+        </div>
+        <form id="email-form">
+            <input type="email" id="email-input" placeholder="Your email" required style="margin-top: 20%;">
+            <button type="submit" class="upload-button">Subscribe</button>
+        </form>
+        <div id="confirmation-message" class="text-container" style="display: none;">
+            <span>Thank you for subscribing!</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+
+            // Here you would send the email to your backend for processing
+            fetch('/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({email: email}),
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('confirmation-message').style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
