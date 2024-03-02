@@ -3,6 +3,21 @@
 <head>
     <title>Blue Box</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Custom styling for the file input element */
+        input[type="file"] {
+            display: none; /* Hide the default file input */
+        }
+
+        .upload-button {
+            cursor: pointer; /* Change cursor to pointer for better UX */
+        }
+
+        .uploaded-image {
+            max-width: 100px; /* Limit the width of the displayed image */
+            max-height: 100px; /* Limit the height of the displayed image */
+        }
+    </style>
 </head>
 <body>
     <div class="blue-box">
@@ -10,7 +25,25 @@
         <div class="text-container">
             <span style="font-weight: bold;">Upload a receipt</span> or drag it here
         </div>
-        <div class="upload-button">Upload Image</div>
+        <label for="file-upload" class="upload-button">Upload Image</label>
+        <input type="file" id="file-upload" accept="image/*">
+        <img id="uploaded-image" class="uploaded-image" style="display: none;">
     </div>
+
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                const imageUrl = event.target.result;
+                const uploadedImage = document.getElementById('uploaded-image');
+                uploadedImage.src = imageUrl;
+                uploadedImage.style.display = 'block'; // Show the uploaded image
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
 </body>
 </html>
