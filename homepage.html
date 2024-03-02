@@ -3,21 +3,6 @@
 <head>
     <title>Blue Box</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <style>
-        /* Custom styling for the file input element */
-        input[type="file"] {
-            display: none; /* Hide the default file input */
-        }
-
-        .upload-button {
-            cursor: pointer; /* Change cursor to pointer for better UX */
-        }
-
-        .uploaded-image {
-            max-width: 100px; /* Limit the width of the displayed image */
-            max-height: 100px; /* Limit the height of the displayed image */
-        }
-    </style>
 </head>
 <body>
     <div class="blue-box">
@@ -34,14 +19,20 @@
         document.getElementById('file-upload').addEventListener('change', function(e) {
             const file = e.target.files[0];
             const reader = new FileReader();
-
+    
             reader.onload = function(event) {
                 const imageUrl = event.target.result;
-                const uploadedImage = document.getElementById('uploaded-image');
-                uploadedImage.src = imageUrl;
-                uploadedImage.style.display = 'block'; // Show the uploaded image
+    
+                // Send the image URL to your Python backend
+                fetch('/process-image', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({imageUrl: imageUrl}),
+                });
             };
-
+    
             reader.readAsDataURL(file);
         });
     </script>

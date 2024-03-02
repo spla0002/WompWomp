@@ -57,3 +57,17 @@ body {
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
+
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.upload-button {
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.uploaded-image {
+    max-width: 100px; /* Limit the width of the displayed image */
+    max-height: 100px; /* Limit the height of the displayed image */
+}
