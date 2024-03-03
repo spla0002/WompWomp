@@ -1,0 +1,598 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+body {
+    background: #3db999;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    
+    height: 100%;
+    margin: auto;
+    text-shadow: 0 0px 2px rgba(245, 245, 245, .25);
+    color: white;
+  }
+
+#upload-container{
+    border: 2px solid white;
+    width: 600px;
+    height:600px;
+    margin-left: 620px;
+    margin-top: 200px;
+
+    background-color: grey;
+}
+#loading-container{
+    margin-left: 45%;
+    margin-top:400px
+}
+#upload-icon{
+    margin-left: 235px;
+    margin-top: 150px;
+
+}
+#upload-header{
+    margin-left: 200px;
+}
+#upload-form{
+    margin-left: 150px;
+    margin-top: 10px;
+}
+
+
+
+#image-input{
+    
+    
+    width: 300px;
+    height: 50px;
+    padding-top: 2px;
+    
+    padding-bottom: 2px;
+    font-size: 15px;
+    font-family: 'Roberto';
+    margin-left: 65px;
+}
+
+
+
+#submit-btn{
+    
+    margin-left: 80px;
+    font-family: 'Roboto';
+   --font-color: #fefefe;
+    --bg-color: #3db999;
+    --main-color: #fefefe;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color :var(--font-color);
+    cursor: pointer;
+    width: 150px;
+
+  
+
+}
+
+
+#submit-btn:active{
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px,3px);
+}
+
+.input-div{
+  position: relative;
+  margin-top: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left:230px;
+  z-index: 0;
+  border: 2px solid rgb(61, 185, 153);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 100px  rgb(73, 174, 155) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  animation: flicker 2s linear infinite;
+  margin-bottom: 30px;
+}
+
+.input-icon{
+  color: rgb(61, 241, 208);
+  width: 75px;
+  height: 75px;
+  font-size: 2rem;
+  cursor: pointer;
+  
+  animation: iconflicker 2s linear infinite; 
+}
+
+@keyframes flicker {
+  0% {
+    border: 2px solid rgb(61, 241, 208);
+    box-shadow: 0px 0px 30px rgb(61, 241, 208) , inset 0px 0px 10px rgb(61, 241, 208),0px 0px 5px rgb(255, 255, 255);
+    
+  }
+
+  5% {
+    border: 2px solid rgba(245, 245, 245, .25);
+    box-shadow: none;
+  }
+
+  10% {
+    border: 2px solid rgb(61, 241, 208);
+    box-shadow: 0px 0px 30px rgb(61, 241, 208) , inset 0px 0px 10px rgb(61, 241, 208),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  25% {
+    box-shadow: none;
+    border: 2px solid rgba(245, 245, 245, .25);
+  }
+
+  30% {
+    border: 2px solid rgb(61, 241, 208);
+    box-shadow: 0px 0px 30px rgb(61, 241, 208) , inset 0px 0px 10px rgb(61, 241, 208),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  100% {
+    border: 2px solid rgb(61, 241, 208);
+    box-shadow: 0px 0px 30px rgb(61, 241, 208) , inset 0px 0px 10px rgb(61, 241, 208),0px 0px 5px rgb(255, 255, 255);
+  }
+}
+
+@keyframes iconflicker {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 0.2;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Email section */
+
+#email-container{
+    margin-left:30%;
+    margin-top: 300px;
+    font-family: 'Nunito';
+    font-size: 25pt;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.hidden{
+    opacity: 0;
+    
+}
+
+#email-btn{
+    border: none;
+    background-color: transparent;
+    width: 65px;
+    height: 50px;
+    transform: translateY(15px);
+    
+}
+
+#email-btn:hover{
+    cursor: pointer;
+
+}
+
+#email-btn-img{
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+#email-btn:hover #email-btn-img{
+    width: 75px;
+}
+
+
+
+
+#email-input {
+    margin-left: 130px;
+    height: 50px;
+    
+    margin-top: 2rem;
+    border-radius: 10px;
+    outline: 2px solid #00a6fb;
+    border: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 14pt;
+    background-color: #d6f1ff;
+    outline-offset: 3px;
+    padding: 10px 12.5px;
+    transition: all 0.2s ease;
+    width: 400px;
+}
+
+#email-warning{
+    font-family: 'Nunito';
+    font-size: 14pt;
+    position: absolute;
+    margin-left: 140px;
+
+    color:yellow;
+    margin-top:5px;
+    transition: opacity 0.5s ease;
+}
+
+#email-input:hover {
+  background-color: #fff;
+}
+
+#email-input:focus {
+  outline-offset: -6px;
+  background-color: #d6f1ff;
+}
+
+#completeHeader{
+  font-family: 'Nunito';
+  margin-top:70%;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Smiley face load */
+.loader {
+  width: 8em;
+  height: 8em;
+}
+
+.loader__eye1,
+  .loader__eye2,
+  .loader__mouth1,
+  .loader__mouth2 {
+  animation: eye1 3s ease-in-out infinite;
+}
+
+.loader__eye1,
+  .loader__eye2 {
+  transform-origin: 64px 64px;
+}
+
+.loader__eye2 {
+  animation-name: eye2;
+}
+
+.loader__mouth1 {
+  animation-name: mouth1;
+}
+
+.loader__mouth2 {
+  animation-name: mouth2;
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue), 90%, 10%);
+    --fg: hsl(var(--hue), 90%, 90%);
+  }
+}
+
+@keyframes eye1 {
+  from {
+    transform: rotate(-260deg) translate(0, -56px);
+  }
+
+  50%,
+    60% {
+    animation-timing-function: cubic-bezier(0.17, 0, 0.58, 1);
+    transform: rotate(-40deg) translate(0, -56px) scale(1);
+  }
+
+  to {
+    transform: rotate(225deg) translate(0, -56px) scale(0.35);
+  }
+}
+
+@keyframes eye2 {
+  from {
+    transform: rotate(-260deg) translate(0, -56px);
+  }
+
+  50% {
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+  }
+
+  52.5% {
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1, 0);
+  }
+
+  55%,
+    70% {
+    animation-timing-function: cubic-bezier(0, 0, 0.28, 1);
+    transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+  }
+
+  to {
+    transform: rotate(150deg) translate(0, -56px) scale(0.4);
+  }
+}
+
+@keyframes eyeBlink {
+  from,
+    25%,
+    75%,
+    to {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes mouth1 {
+  from {
+    animation-timing-function: ease-in;
+    stroke-dasharray: 0 351.86;
+    stroke-dashoffset: 0;
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    stroke-dasharray: 175.93 351.86;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    animation-timing-function: steps(1, start);
+    stroke-dasharray: 175.93 351.86;
+    stroke-dashoffset: -175.93;
+    visibility: visible;
+  }
+
+  75%,
+    to {
+    visibility: hidden;
+  }
+}
+
+@keyframes mouth2 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+  }
+
+  50% {
+    animation-timing-function: ease-in-out;
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -351.86;
+  }
+}
+
+
+
+/*Movile vbersio
+*/
+
+
+@media (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+
+  #upload-container {
+      width: 60%;
+      height: 80%;
+      margin-left: 20%;
+      margin-top: 50%;
+  }
+
+  #loading-container {
+      margin: 0;
+      margin-left: 35%;
+      margin-top: 75%;
+  }
+
+  #upload-icon {
+      font-size: 50%;
+  }
+
+  #upload-header {
+      margin: 0;
+      font-size: 12px;
+      margin-left: 30px;
+      margin-bottom:30px;
+  }
+
+  #upload-form {
+      width: 60%;
+      margin: 0;
+      margin-left: 20px;
+      margin-bottom: 20px;
+
+  }
+
+  #image-input {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      font-size: 10px;
+      font-family: 'Roberto';
+      margin: 0;
+      margin-left: 20%;
+      margin-bottom: 30px;
+  }
+
+  #submit-btn {
+      margin: 0;
+      font-family: 'Roboto';
+      --font-color: #fefefe;
+      --bg-color: #3db999;
+      --main-color: #fefefe;
+      border-radius: 5px;
+      border: 2px solid var(--main-color);
+      background-color: var(--bg-color);
+      box-shadow: 4px 4px var(--main-color);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--font-color);
+      cursor: pointer;
+      width: 60%;
+      margin-left:35%;
+      margin-bottom: 30%;
+  }
+
+  #submit-btn:active{
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px,3px);
+}
+
+  .input-div {
+      width: 35%;
+      height: 40%;
+      border-radius: 50%;
+      margin: 0;
+      margin-left: 32%;
+      border: 2px solid rgb(61, 185, 153);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: 0px 0px 100px rgb(73, 174, 155), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+      animation: flicker 2s linear infinite;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+  }
+  .input-icon {
+    width: 40px;
+    height: 80px;
+    font-size: 2rem;
+    cursor: pointer;
+    animation: iconflicker 2s linear infinite;
+}
+
+
+#email-container{
+  margin-left:15%;
+  margin-top: 250px;
+  font-family: 'Nunito';
+  white-space: nowrap;
+  font-size: 9pt;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+
+.hidden{
+  opacity: 0;
+  
+}
+
+#email-btn{
+  border: none;
+  background-color: transparent;
+  width: 60px;
+  height: 55px;
+  transform: translateY(20px);
+  margin-top: 10px;
+  margin-left: 0px;
+  
+  
+}
+
+#email-btn:hover{
+  cursor: pointer;
+
+}
+
+#email-btn-img{
+  justify-content: center;
+  transition: all 0.5s ease;
+  width: 60px;
+  height: 55px;
+  
+}
+
+#email-btn:hover #email-btn-img{
+  width: 75px;
+}
+
+#email-form{
+  margin-top: -20px;
+
+}
+
+
+#email-input {
+  margin-left: 0px;
+  height: 40px; /* Reduced height */
+  margin-top: 1rem; /* Reduced margin-top */
+  border-radius: 8px; /* Reduced border-radius */
+  outline: 2px solid #00a6fb;
+  border: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 9pt; /* Reduced font-size */
+  background-color: #d6f1ff;
+  outline-offset: 2px;
+  padding: 8px 10px; /* Reduced padding */
+  transition: all 0.2s ease;
+  width: 200px; /* Reduced width */
+}
+
+#email-warning{
+  font-family: 'Nunito';
+  font-size: 10pt;
+  position: absolute;
+  margin-left: 30px;
+  white-space: nowrap;
+  color:yellow;
+  margin-top:20px;
+  transition: opacity 0.5s ease;
+}
+
+#email-input:hover {
+background-color: #fff;
+}
+
+#email-input:focus {
+outline-offset: -6px;
+background-color: #d6f1ff;
+}
+
+
+}

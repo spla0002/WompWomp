@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+
+</head>
+<body>
+    <div class="main">
+        <div id="upload-container" style="display:block;">
+            <div class="input-div">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="input-icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+            </div>    
+            <h4 id = 'upload-header'> <span id = 'uploade-header-bold'>Upload a receipt</span> or drag it here</h4>
+
+            <form id = 'upload-form'  enctype="multipart/form-data">
+                <input type="file" id = 'image-input' name="image" accept="image/png, image/jpeg">
+
+                <button type="submit" id= 'submit-btn'>Submit!</button>
+            </form>
+            <div id="loading" style="display: none;">Loading...</div>
+        </div>
+
+        <div id = 'loading-container' style="display: none;">
+            <div>
+                <svg height="108px" width="108px" viewBox="0 0 128 128" class="loader">
+                    <defs>
+                    <clipPath id="loader-eyes">
+                        <circle transform="rotate(-40,64,64) translate(0,-56)" r="8" cy="64" cx="64" class="loader__eye1"></circle>
+                        <circle transform="rotate(40,64,64) translate(0,-56)" r="8" cy="64" cx="64" class="loader__eye2"></circle>
+                    </clipPath>
+                    <linearGradient y2="1" x2="0" y1="0" x1="0" id="loader-grad">
+                        <stop stop-color="#000" offset="0%"></stop>
+                        <stop stop-color="#fff" offset="100%"></stop>
+                    </linearGradient>
+                    <mask id="loader-mask">
+                        <rect fill="url(#loader-grad)" height="128" width="128" y="0" x="0"></rect>
+                    </mask>
+                    </defs>
+                    <g stroke-dasharray="175.93 351.86" stroke-width="12" stroke-linecap="round">
+                    <g>
+                        <rect clip-path="url(#loader-eyes)" height="64" width="128" fill="hsl(5,90%,50%)"></rect>
+                        <g stroke="hsl(10,90%,50%)" fill="none">
+                        <circle transform="rotate(180,64,64)" r="56" cy="64" cx="64" class="loader__mouth1"></circle>
+                        <circle transform="rotate(0,64,64)" r="56" cy="64" cx="64" class="loader__mouth2"></circle>
+                        </g>
+                    </g>
+                    <g mask="url(#loader-mask)">
+                        <rect clip-path="url(#loader-eyes)" height="64" width="128" fill="hsl(700,90%,50%)"></rect>
+                        <g stroke="hsl(400,90%,50%)" fill="none">
+                        <circle transform="rotate(180,64,64)" r="56" cy="64" cx="64" class="loader__mouth1"></circle>
+                        <circle transform="rotate(0,64,64)" r="56" cy="64" cx="64" class="loader__mouth2"></circle>
+                        </g>
+                    </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="" id = 'email-container' style="display: none;">
+            <h1 id = 'email-header'> Please enter your Email!</h1>
+            
+            <form id = 'email-form'>
+                <input id ='email-input' placeholder="Email" >
+                <p class = 'hidden' id = 'email-warning'>Please enter a valid email address</p>
+                <button type="submit" id="email-btn"><img id = 'email-btn-img' width="65" height="50" src="https://img.icons8.com/ios-filled/50/arrow.png" alt="arrow"/></button>
+            </form>
+        </div>
+        <div id="completescreen" style="display: none;">
+            <h1 id = 'completeHeader'>Your recipes have been emailed to you!</h1>
+    
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
