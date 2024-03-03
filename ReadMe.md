@@ -10,29 +10,29 @@ Recipe matching
 Email functionality  
 
 ## Technologies Used  
-Python
-FastAPI
-OpenCV
-NumPy
-Python-dotenv
-OpenAI
-Pytesseract
-Pillow
-Requests
+Python  
+FastAPI  
+OpenCV  
+NumPy  
+Python-dotenv  
+OpenAI  
+Pytesseract  
+Pillow  
+Requests  
 
 ## Installation  
-Clone the repository
-Install the required packages using pip install -r requirements.txt
-Set up PATH variables as required
-Run the application using uvicorn main:app --reload
+Clone the repository  
+Install the required packages using pip install -r requirements.txt  
+Set up PATH variables as required  
+Run the application using uvicorn main:app --reload  
 
 ## Usage  
-Upload an image of a receipt
-The application will extract the ingredients and find a recipe matching the items bought
-You can then choose to email the recipe to yourself
+Upload an image of a receipt  
+The application will extract the ingredients and find a recipe matching the items bought  
+You can then choose to email the recipe to yourself  
 
 ## Contributors  
-Dhruv Israni
-Suman Plackal
-Jayden Mun Wai Ng
-Adrian Dimar
+Dhruv Israni  
+Suman Plackal  
+Jayden Mun Wai Ng  
+Adrian Dimar  
